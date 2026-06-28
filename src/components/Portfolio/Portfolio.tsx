@@ -1,7 +1,47 @@
-import type { ReactNode } from "react";
+import { type ReactNode, useState } from "react";
+
+import clsx from "clsx";
+
+import FilterButtons from "@/components/FilterButtons/FilterButtons";
+import FilterSelect from "@/components/FilterSelect/FilterSelect";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
+
+import { PROJECTS, type ProjectCategory } from "@/data/projects";
 
 import styles from "./Portfolio.module.css";
 
 export default function Portfolio(): ReactNode {
-  return <article className={styles.portfolio}></article>;
+  const [selectedCategory, setSelectedCategory] =
+    useState<ProjectCategory>("All");
+
+  const filteredProjects =
+    selectedCategory === "All"
+      ? PROJECTS
+      : PROJECTS.filter((project) => project.category === selectedCategory);
+
+  return (
+    <article className={styles.portfolio}>
+      <header>
+        <h2 className={clsx(styles["article-title"], styles.h2)}>Portfolio</h2>
+      </header>
+
+      <section className={styles.projects}>
+        <FilterButtons
+          selected={selectedCategory}
+          onSelect={setSelectedCategory}
+        />
+
+        <FilterSelect
+          selected={selectedCategory}
+          onSelect={setSelectedCategory}
+        />
+
+        <ul className={styles["project-list"]}>
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </ul>
+      </section>
+    </article>
+  );
 }
