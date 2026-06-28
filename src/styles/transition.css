@@ -1,0 +1,8 @@
+:root {
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease-in-out;
+}

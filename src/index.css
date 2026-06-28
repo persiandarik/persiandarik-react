@@ -1,0 +1,185 @@
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /*caret-color: var(--color-primary);*/
+  /*accent-color: var(--color-primary);*/
+
+  font-family: var(--ff-poppins), sans-serif;
+}
+
+input,
+label,
+select,
+textarea,
+button,
+fieldset,
+legend,
+datalist,
+output,
+option,
+optgroup {
+  font: inherit;
+}
+
+body {
+  background: var(--smoky-black);
+
+  /*color: var(--color-text);*/
+
+  /*margin-inline: auto;*/
+
+  /*font-size: var(--fz-400);*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /*color: var(--color-primary);*/
+
+  &:hover {
+    /*color: var(--color-primary-dark);*/
+  }
+}
+
+li {
+  list-style: none;
+}
+
+
+img, .ion-icon, a, button, time, span {
+  display: block;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+:focus {
+  outline-color: var(--orange-yellow-crayola);
+}
+:focus-visible{
+  outline-color: var(--orange-yellow-crayola);
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+/* mobile highlight color tap */
+:is(a, input, button) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+
+}
+
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 5px; /* for vertical scrollbar */
+  height: 5px; /* for horizontal scrollbar */
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--onyx);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button { width: 20px; }
+
+
+@media (min-width: 580px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+
+}
+
+@media (min-width: 768px) {
+
+  /**
+   * REUSED STYLE
+   */
+  .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
+
+}
+
+@media (min-width: 1024px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  /**
+   * REUSED STYLE
+   */
+
+}
+
+@media (min-width: 1250px) {
+
+  /**
+   * RESET
+   */
+  body::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--smoky-black);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border: 5px solid var(--smoky-black);
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+    inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.15);
+  }
+
+  body::-webkit-scrollbar-button {
+    height: 60px;
+  }
+
+
+}
+
