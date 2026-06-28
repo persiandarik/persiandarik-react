@@ -1,2 +1,81 @@
 .resume {
+  header {
+    .h2 {
+      color: var(--white-2);
+      text-transform: capitalize;
+      font-size: var(--fs-1);
+    }
+
+    .article-title {
+      position: relative;
+      padding-bottom: 7px;
+
+      margin-bottom: 30px;
+
+      @media (min-width: 580px) {
+        font-weight: var(--fw-600);
+        padding-bottom: 15px;
+      }
+      @media (min-width: 768px) {
+        padding-bottom: 20px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background: var(--text-gradient-yellow);
+        border-radius: 3px;
+
+        @media (min-width: 580px) {
+          width: 40px;
+          height: 5px;
+        }
+      }
+    }
+  }
+
+  .skill {
+    .h3{
+      color: var(--white-2);
+      text-transform: capitalize;
+      font-size: var(--fs-2);
+    }
+    .skills-title {
+      margin-bottom: 20px;
+    }
+
+    .skills-list {
+      padding: 20px;
+    }
+    .content-card{
+      position: relative;
+      background: var(--border-gradient-onyx);
+      padding: 15px;
+      padding-top: 45px;
+      border-radius: 14px;
+      box-shadow: var(--shadow-2);
+      cursor: pointer;
+      z-index: 1;
+
+      @media (min-width: 580px) {
+        padding: 30px;
+        padding-top: 25px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        background: var(--bg-gradient-jet);
+        border-radius: inherit;
+        z-index: -1;
+      }
+    }
+  }
+
 }
+
