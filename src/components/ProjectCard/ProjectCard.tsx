@@ -25,7 +25,7 @@ export default function ProjectCard({
       transition={{ duration: 0.25 }}
       className={styles["project-item"]}
     >
-      <a href={href} target="_blank" rel="noreferrer">
+      <a href={href} rel="noreferrer">
         <figure className={styles["project-img"]}>
           <div className={styles["project-item-icon-box"]}>
             <IoEyeOutline className={styles["ion-icon"]} />
