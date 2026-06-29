@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { motion } from "framer-motion";
 import { IoEyeOutline } from "react-icons/io5";
 
 import type { Project } from "@/data/projects";
@@ -16,7 +17,14 @@ export default function ProjectCard({
   alt,
 }: Props): ReactNode {
   return (
-    <li className={styles["project-item"]}>
+    <motion.li
+      layout
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.5 }}
+      transition={{ duration: 0.25 }}
+      className={styles["project-item"]}
+    >
       <a href={href} target="_blank" rel="noreferrer">
         <figure className={styles["project-img"]}>
           <div className={styles["project-item-icon-box"]}>
@@ -30,6 +38,6 @@ export default function ProjectCard({
 
         <p className={styles["project-category"]}>{category}</p>
       </a>
-    </li>
+    </motion.li>
   );
 }

@@ -2,6 +2,8 @@ import { type ReactNode, useState } from "react";
 
 import clsx from "clsx";
 
+import { AnimatePresence } from "framer-motion";
+
 import FilterButtons from "@/components/FilterButtons/FilterButtons";
 import FilterSelect from "@/components/FilterSelect/FilterSelect";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
@@ -36,10 +38,12 @@ export default function Portfolio(): ReactNode {
           onSelect={setSelectedCategory}
         />
 
-        <ul key={selectedCategory} className={styles["project-list"]}>
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
-          ))}
+        <ul className={styles["project-list"]}>
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
+          </AnimatePresence>
         </ul>
       </section>
     </article>
