@@ -36,7 +36,7 @@ export default function Portfolio(): ReactNode {
           onSelect={setSelectedCategory}
         />
 
-        <ul className={styles["project-list"]}>
+        <ul key={selectedCategory} className={styles["project-list"]}>
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
