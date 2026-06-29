@@ -82,15 +82,10 @@
       .input-wrapper {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 25px;
-        /*margin-bottom: 25px;*/
-
-        @media (min-width: 580px) {
-          gap: 30px;
-          /*margin-bottom: 30px;*/
-        }
+        
         @media (min-width: 768px) {
           grid-template-columns: 1fr 1fr;
+          gap: 30px;
         }
 
         .form-input {
