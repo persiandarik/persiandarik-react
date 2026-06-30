@@ -1,14 +1,14 @@
-import Persiandarik from "/public/Persiandarik-demo.png";
-import canban from "/public/canban-demo.png";
-import project2 from "/public/project-2.png";
-import project3 from "/public/project-3.jpg";
-import project4 from "/public/project-4.png";
-import project5 from "/public/project-5.png";
-import project6 from "/public/project-6.png";
-import project7 from "/public/project-7.png";
-import project8 from "/public/project-8.jpg";
-import project9 from "/public/project-9.png";
-import project1 from "/public/project-Portfolio-Photographer.png";
+const Persiandarik = "/persiandarik-demo.png";
+const canban = "/canban-demo.png";
+const project2 = "/project-2.png";
+const project3 = "/project-3.jpg";
+const project4 = "/project-4.png";
+const project5 = "/project-5.png";
+const project6 = "/project-6.png";
+const project7 = "/project-7.png";
+const project8 = "/project-8.jpg";
+const project9 = "/project-9.png";
+const project1 = "/project-Portfolio-Photographer.png";
 
 export const PROJECT_CATEGORIES = [
   "All",
