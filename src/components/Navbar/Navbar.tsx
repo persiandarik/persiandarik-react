@@ -10,7 +10,7 @@ export default function Navbar(): ReactNode {
   const navLinks = [
     { to: "/", label: "About" },
     { to: "/resume", label: "Resume" },
-    { to: "/portfolio", label: "Portfolio" },
+    { to: "/Projects", label: "Projects" },
     { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
   ];

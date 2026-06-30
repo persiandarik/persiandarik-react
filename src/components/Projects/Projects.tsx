@@ -10,9 +10,9 @@ import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 import { PROJECTS, type ProjectCategory } from "@/data/projects";
 
-import styles from "./Portfolio.module.css";
+import styles from "./Projects.module.css";
 
-export default function Portfolio(): ReactNode {
+export default function Projects(): ReactNode {
   const [selectedCategory, setSelectedCategory] =
     useState<ProjectCategory>("All");
 
@@ -22,9 +22,9 @@ export default function Portfolio(): ReactNode {
       : PROJECTS.filter((project) => project.category === selectedCategory);
 
   return (
-    <article className={styles.portfolio}>
+    <article className={styles.Projects}>
       <header>
-        <h2 className={clsx(styles["article-title"], styles.h2)}>Portfolio</h2>
+        <h2 className={clsx(styles["article-title"], styles.h2)}>Projects</h2>
       </header>
 
       <section className={styles.projects}>

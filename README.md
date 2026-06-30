@@ -1,85 +1,46 @@
-# React + TypeScript + Vite
+# Persiandarik
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+![GitHub repo size](https://img.shields.io/github/repo-size/persiandarik/persiandarik-react)
+![GitHub stars](https://img.shields.io/github/stars/persiandarik/persiandarik-react?style=social)
+![GitHub forks](https://img.shields.io/github/forks/persiandarik/persiandarik-react?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/persiandarik?style=social)](https://twitter.com/intent/follow?screen_name=persiandarik)
 
-Currently, two official plugins are available:
+Responsive website, responsive for all devices, built using
+React, TypeScript, CSS, Zod, React Hook Form
+Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
-  uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
-  uses [SWC](https://swc.rs/)
+## <a style="color:orange" href="https://persiandarik.ir"><strong>➥ Live Demo</strong></a>
 
-## React Compiler
+![Canban Desktop Demo](./public/persiandarik-demo-original.png "Desktop Demo")
 
-The React Compiler is enabled on this template. See
-[this documentation](https://react.dev/learn/react-compiler) for more
-information.
+## Prerequisites
 
-Note: This will impact Vite dev & build performances.
+Before you begin, ensure you have met the following requirements:
 
-## Expanding the ESLint configuration
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your
+  operating system.
 
-If you are developing a production application, we recommend updating the
-configuration to enable type-aware lint rules:
+## Installing Canban
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+To install **Canban**, follow these steps:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Linux and macOS:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+sudo git clone https://github.com/persiandarik/Canban.git
 ```
 
-You can also install
-[eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
-and
-[eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
-for React-specific lint rules:
+Windows:
 
-```js
-// eslint.config.js
-import reactDom from "eslint-plugin-react-dom";
-import reactX from "eslint-plugin-react-x";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+git clone https://github.com/persiandarik/Canban.git
 ```
+
+## Contact
+
+If you want to contact me you can reach me
+at [Twitter](https://www.twitter.com/persiandarik).
+
+## License
+
+This project is **Not free to use** and does not contain any license.

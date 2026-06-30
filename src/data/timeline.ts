@@ -22,21 +22,26 @@ export const EDUCATIONS: TimelineItem[] = [
 
 export const EXPERIENCES: TimelineItem[] = [
   {
-    id: 1,
+    id: 3,
+    title: "React Developer",
+    period: "2026 — Present",
+    // description: "Digital Currency Trading\nMiner & Graphic Card Installer",
+    description:
+      "Developed a Kanban-style task management application.\n" +
+      "Built a fully responsive personal portfolio website.\n" +
+      "Implemented form validation using modern React libraries.\n" +
+      "Focused on component reusability and clean architecture principles.",
+  },
+  {
+    id: 2,
     title: "Cryptocurrency Freelancer",
     period: "2020 — Present",
     description: "Digital Currency Trading\nMiner & Graphic Card Installer",
   },
   {
-    id: 2,
+    id: 1,
     title: "Frontend Developer",
     period: "2019 — 2020",
     description: "Shablon Team, Qom",
-  },
-  {
-    id: 3,
-    title: "Frontend Developer",
-    period: "2019 — 2020",
-    description: "Arad Branding Company, Qom",
   },
 ];

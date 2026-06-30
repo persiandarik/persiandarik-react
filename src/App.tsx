@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router";
 import About from "@/components/About/About.tsx";
 import Blog from "@/components/Blog/Blog.tsx";
 import Contact from "@/components/Contact/Contact.tsx";
-import Portfolio from "@/components/Portfolio/Portfolio.tsx";
+import Projects from "@/components/Projects/Projects.tsx";
 import Resume from "@/components/Resume/Resume.tsx";
 
 import RootLayout from "@/layouts/RootLayout/RootLayout.tsx";
@@ -20,7 +20,7 @@ export default function App(): ReactNode {
       <Route element={<RootLayout />}>
         <Route index element={<About />} />
         <Route path="resume" element={<Resume />} />
-        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="Projects" element={<Projects />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
       </Route>

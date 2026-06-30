@@ -14,15 +14,15 @@ export const SERVICES: Service[] = [
     id: 1,
     icon: designIcon,
     alt: "Design icon",
-    title: "Web Design",
-    description:
-      "The most modern and high-quality design made at a professional level.",
+    title: "Front-End Development",
+    description: "Building modern and responsive web applications .",
   },
   {
     id: 2,
     icon: devIcon,
     alt: "Web development icon",
-    title: "Web Development",
-    description: "High-quality development of sites at the professional level.",
+    title: "React Development",
+    description:
+      "Creating reusable components and state using modern tools and libraries.",
   },
 ];
