@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 
 import clsx from "clsx";
 
+import { supabase } from "@/lib/supabase.ts";
 import { IoPaperPlane } from "react-icons/io5";
 
 import {
@@ -31,36 +32,27 @@ export default function Contact(): ReactNode {
 
   const onSubmit = async (data: ContactFormData): Promise<void> => {
     try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/ebadijob@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name: data.fullName,
-            email: data.email,
-            message: data.message,
-            _template: "table",
-          }),
-        },
-      );
+      const { error } = await supabase.from("contacts").insert({
+        name: data.fullName,
+        email: data.email,
+        message: data.message,
+      });
 
-      const result = await response.json();
-
-      if (result.success) {
-        setSuccessMessage("✅ Message sent successfully");
-
-        reset();
-
-        setTimeout(() => {
-          setSuccessMessage("");
-        }, 5000);
+      if (error) {
+        setSuccessMessage("❌ Failed to send message. Please try again.");
       }
+
+      setSuccessMessage("✅ Message sent successfully");
+
+      reset();
+
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 5000);
     } catch (error) {
       console.error(error);
+
+      setSuccessMessage("❌ Failed to send message");
     }
   };
 
